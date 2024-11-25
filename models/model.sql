@@ -1,5 +1,3 @@
-{{ config(materialized="table") }}
-
 with
     location as (
         select unique_key as id, borough, incident_zip as zip_code, city
@@ -20,5 +18,4 @@ with
         join complaint_type using (id)
     )
 
-select *
-from service_request
+select * from service_request
