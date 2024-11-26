@@ -1,5 +1,5 @@
 select 
-    row_number() over () key,*
+    *
 from 
     (
     select location_id, 
