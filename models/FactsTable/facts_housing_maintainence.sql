@@ -8,4 +8,8 @@ from
             {{ ref("dim_hm_location") }},
             {{ ref("dim_space") }},
             {{ ref("dim_status") }}
+        join
+            {{ ref("facts_service_request") }} sr
+            on sr.complaint_type_id = complaint_type_id
+        join {{ ref("facts_service_request") }} sr2 on sr2.location_id = location_id
     )
