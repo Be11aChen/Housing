@@ -1,5 +1,4 @@
-select
-    row_number() over() as hm_complaint_type_id, *
+select row_number() over () as hm_complaint_type_id, *
 from
     (
         select distinct major_category, minor_category
