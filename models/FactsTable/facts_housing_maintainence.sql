@@ -1,4 +1,4 @@
-select row_number() over () as maintainence_key, *
+select row_number() over () as maintain_key, *
 from
     (
         select location_id, complaint_type_id, date_id, space_id, status_id
