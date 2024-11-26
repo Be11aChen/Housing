@@ -1,5 +1,5 @@
 select 
-    *
+    row_number() over() as unique_key, *
 from 
     (
     select location_id, 
@@ -13,4 +13,4 @@ from
     {{ ref('dim_space') }},
     {{ ref('dim_status') }} 
     )
-order by unique_key ASC
+where unique_key = problem_id
