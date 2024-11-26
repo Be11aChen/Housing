@@ -6,7 +6,7 @@ with
     intergrated as (
         select distinct *
         from facts_housing_maintainence fhm
-        inner join facts_service_request fsr on fsr.request_key = fhm.maintain_key
+        join facts_service_request fsr on fsr.request_key = fhm.maintain_key
     )
 select *
 from intergrated
